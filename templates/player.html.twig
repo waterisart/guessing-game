@@ -1,0 +1,26 @@
+{# {% set username = (app.user ? app.user.username : 'Anonymous') %} #}
+<div class="col">
+
+    <div class="card mb-4 rounded-3 shadow-sm">
+        
+        <div class="card-header py-3">
+            <div class="player-avatar-generic offset-4"></div>
+            <h4 class="my-0 fw-normal">Player Number {{ playerNumber }} (<strong>{{ username }}</strong>)</h4>
+        </div>
+
+        <div class="card-body">
+            
+            <!-- form tag -->
+            <form id="form_player_{{ username }}">
+            <!-- form tag -->
+                <input type="text" id="number" name="_number" class="w-50" value=""/>
+                <input type="hidden" id="username" name="_username" value="{{ username }}"/>
+                <p></p>
+                <submit id="button_player_{{ username }}" type="submit" class="w-80 btn btn-lg btn-info"
+                onclick="guess('{{ username }}')">Guess number</submit>
+            
+            </form>
+        </div>
+    </div>
+    <div id="status_player_{{ username }}" class="p-2 m-3"></div>
+</div>

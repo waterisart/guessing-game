@@ -1,0 +1,13 @@
+mercure:
+    hubs:
+        default:
+            # url: '%env(MERCURE_URL)%'
+            # public_url: '%env(MERCURE_PUBLIC_URL)%'
+            url: 'http://caddy/.well-known/mercure'
+            public_url: 'https://localhost/.well-known/mercure'
+
+            jwt:
+                secret: '!ChangeMe!'
+                publish: ['/number']
+                subscribe: ['/number']
+                factory: App\Mercure\MyTokenFactory

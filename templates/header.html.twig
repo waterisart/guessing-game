@@ -1,0 +1,33 @@
+ {% block header %}
+
+  {% set username = (app.user ? app.user.username : 'Guest guesser') %}
+  {% if app.user != null %}
+    <script>
+      let username = '{{ username }}';
+    </script>
+  {% endif %}
+
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">Guess the number</span>
+      </a>
+      <div  class="fs-3 m-auto text-center">Hey <strong>{{ username }}</strong>!</div>
+      <nav class="p-2 m-2">
+        {% if app.user == null %}
+          <a href="/register">Register</a>
+        {% endif %}  
+
+        {% if app.user != null %}
+          <button type="submit" id="button_join_game_{{ app.user.username }}" class="w-80 btn btn-lg btn-info p-2 m-2">New Game</button>
+        {% endif %}
+
+        <a href="{{ app.user ? '/logout' : '/login' }}" class="p2 m-2">{{ app.user ? 'Logout' : 'Login' }}</a>  
+      </nav>
+    </div>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <div class="display-6">"The greatest game ever guessed"</div>
+    </div>
+  </header>
+{% endblock %}

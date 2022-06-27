@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+  <main>
+
+  <div class="w-4 m-auto">
+      <p>This is where all your guessing dreams come true!</p>
+      <p>
+      Intro:
+      </p>
+      <p>
+      This technical challenge is designed to gauge your capabilities in working with PHP, CSS, JS. The challenge is designed to cover several areas of development and allows you to implement the challenge in a way that displays your skills in the best way. It is not designed as a measurement of your absolute skill level, but rather a way to gauge how you approach the project, mentality and your ideas on implementation.
+      </p>
+      <p>We expect this challenge to take between 4 and 8 hours to complete for most candidates. While the use of frameworks and out of the box solutions is allowed, it is also encouraged to be creative and responsible in their implementation.</p>
+
+
+
+      <p><strong>Criteria for the challenge:</strong></p>
+      <ol>
+        <li>The challenge code should be available on either github or be sent in a zipped file.</li>
+        <li>It should include instructions on how to run the challenge app in detail.</li>
+        <li>The challenge is designed to be an indicator of skill, while completing the challenge is important, creative and well thought out solutions are more important than simple completion.</li>
+      </ol>
+      <Strong>Materials:</strong>
+
+      <a href="https://whimsical.com/challenge-9CbF6cqEZZ3JiyZkJcHEzJ@7YNFXnKbYkYSB7ivLfQUF">Whimsical</a>
+
+
+      <p>If the whimsical link does not work, see the end of this document for the visuals additionally</p>
+
+
+      <p><strong>Challenge:</strong></p>
+
+      <p>The challenge is to create a “Guess the Number” Game. You will create the Frontend and backend for this challenge. The game should function with a minimum of 3 players. All players should play in 1 active game session. (One number among all players to be guessed)
+
+      <p>Users will be able to guess a number from 1 - 100 in a competition between all users actively playing the game. The number is generated per game session / round on the server.
+
+      <p>When a guess is sent in, the server should respond with “Lower!” for a result that is too high. “Higher!” for a guess that is too low and “You win” for the first person to win the exact result.
+
+      <p>Other players should get a “You Lose”! when the winner guesses the correct result.
+
+
+      <p><strong>Detailed:</strong></p>
+      <p>Create a UI with the following elements, based on the example wireframes included in this challenge. 
+
+          <ol>
+            <li>A “Game screen” with inputs
+            <li>A Callback notification in-page (Higher / Lower)
+            <li>A “You win / You lose” window
+            <li>A Start new Game window if no game is active
+          </ol>
+
+      <p>Create the logic for guessing the number:</p>
+
+      <ol>
+          <li>Number should be generated on the server side for each game session
+          <li>Guesses from users should be handled independently, and not be dependant on one another
+          <li>Allow players to authenticate themselves
+      </ol>
+
+
+      <p><strong>Notes / Closing:</strong></p>
+
+      <p>The goal of this challenge is to gauge your skill level, decision making process and skills. You are free to interpret the challenge to your best ideas, and are encouraged to ask questions if there is any uncertainty or unknowns you want clarification on.
+
+      <p>
+      The challenge should be sent prior to your in-person technical interview so that both parties have time to prepare everything well in advance.
+      </p>
+    </div>
+  </main>
+
+{% endblock %}
