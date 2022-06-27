@@ -165,8 +165,7 @@ class RoundController extends AbstractController
      */
     private function getPlayerTemplate(string $username = null, int $playerNumber): ?string
     {
-        if(!is_null($username)){
-            $round = $this->roundRepository->findOneByIsFinished(false);
+        if(!is_null($username)) {
             $playerTemplate = $this->renderView('player.html.twig', ['username'=>$username, 'playerNumber' => $playerNumber]);
 
             return $playerTemplate;

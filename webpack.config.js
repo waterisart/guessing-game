@@ -13,10 +13,7 @@ Encore
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
-    .addLoader({
-        test: /\.svelte$/,
-        loader: 'svelte-loader',
-    })
+
     /*
      * ENTRY CONFIG
      *
@@ -76,11 +73,3 @@ Encore
 ;
 
 module.exports = Encore.getWebpackConfig();
-// let config = Encore.getWebpackConfig();
-// config.resolve.mainFields = ['svelte', 'browser', 'module', 'main'];
-// config.resolve.extensions = ['.mjs', '.js', '.svelte'];
-
-// let svelte = config.module.rules.pop();
-// config.module.rules.unshift(svelte);
-
-// module.exports = config;
